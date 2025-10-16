@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Header1" />
+  <title>Header0</title>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <meta property="og:title" content="name_here" />
+  <meta property="og:description" content="Testing grounds." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root {
+      --bg: #182a18;
+      --card-bg: rgba(255 255 255 / 0.12);
+      --text-primary: #e6f0d9;
+      --text-secondary: #a3b089;
+      --accent: #4CAF50;
+      --accent-light: #c4e1b1;
+      --accent-glow: rgba(76, 175, 80, 0.6);
+      --shadow: rgba(0, 0, 0, 0.1);
+      --glass-blur: 12px;
+      --radius: 12px;
+      --transition: 0.3s ease;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text-primary: #f5f5f5;
+      --text-secondary: #aaa;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      transition: background var(--transition), color var(--transition);
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 6px rgba(0,0,0,0.7);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+    }
+
+    .embed-container {
+      width: 100%;
+      max-width: 960px;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 20px var(--shadow);
+      backdrop-filter: blur(var(--glass-blur));
+      -webkit-backdrop-filter: blur(var(--glass-blur));
+      border: 2px solid var(--accent-light);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      text-align: center;
+      user-select: none;
+      text-shadow: 0 0 4px rgba(0,0,0,0.5);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      .embed-container { aspect-ratio: 4 / 3; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>name_here</h1>
+    <div class="subtitle">Heading2</div>
+  </header>
+
+  <main class="embed-container">
+    <iframe src="https://google.com" allowfullscreen loading="lazy"></iframe>
+  </main>
+
+  <footer>
+    &copy; Made wth <3 by 4y6f
+  </footer>
+</body>
+</html>
